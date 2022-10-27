@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'src/screens/Event.dart';
+import 'src/screens/LocalState.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: SafeArea(
-        child: Event(),
+        child: LocalState(),
       )),
     );
   }
