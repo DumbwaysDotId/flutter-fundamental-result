@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'src/widgets/header.dart';
-import 'src/widgets/content.dart';
+import 'src/screens/EmbedExpression.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: SafeArea(
-        child: Container(
-          child: Column(children: [Header(), Content()]),
-        ),
+        child: EmbedExpression(),
       )),
     );
   }

@@ -2,13 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class Header extends StatelessWidget {
-  const Header({super.key});
+class EmbedExpression extends StatelessWidget {
+  const EmbedExpression({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var companyName = "Dumbways";
+    var country = "Indonesia";
+
     return Container(
-      child: Column(children: [Text('This is Header')]),
+      child: Text("Welcome to ... ${companyName} $country"),
     );
   }
 }
