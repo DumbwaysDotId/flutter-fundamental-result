@@ -8,7 +8,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(children: [Text('This is Header')]),
+      child: Text('This is Header'),
     );
   }
 }
