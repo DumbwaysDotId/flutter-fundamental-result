@@ -2,6 +2,10 @@
 
 **Widgets** are supporting components in Flutter such as _Buttons_, _Text_, _Icons_ and so on. Everything that is in the view of our application is called a Widget.
 
+## Stateless & Stateful Widget
+
+**Stateless** widgets are static widgets where all the configurations contained in them are initialized from the start. On the other hand, **Stateful** widgets do the opposite where they are dynamic, so they can be updated whenever needed based on user actions or when data changes.
+
 ## Create Widget
 
 - `Header` Widget
