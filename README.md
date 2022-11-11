@@ -1,16 +1,97 @@
-# flutter_fundamental
+# Styling Flutter
 
-A new Flutter project.
+## Material Design
 
-## Getting Started
+We can use Material Design for Styling on Flutter, wrap all Widget with Material Design like this below code
 
-This project is a starting point for a Flutter application.
+> lib/main.dart
 
-A few resources to get you started if this is your first Flutter project:
+```dart
+import 'package:flutter/material.dart'; // import Material here
+import 'src/screens/Form.dart';
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+void main() {
+  runApp(const MyApp());
+}
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(debugShowCheckedModeBanner: false, home: FormLogin()); // Wrap Widget with Material Design
+  }
+}
+```
+
+## Styling create Simple Form
+
+```dart
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
+class FormLogin extends StatelessWidget {
+  const FormLogin({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color(0xFFd6ffe2),
+        body: SafeArea(
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 20.0),
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                "Login",
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+              ),
+              SizedBox(
+                height: 40.0,
+              ),
+              TextFormField(
+                // autofocus: true,
+                decoration: new InputDecoration(
+                    hintText: "Masukkan email Anda",
+                    labelText: "Email",
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0))),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              TextFormField(
+                obscureText: true,
+                // autofocus: true,
+                decoration: new InputDecoration(
+                    hintText: "Masukkan password Anda",
+                    labelText: "Password",
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0))),
+              ),
+              SizedBox(
+                height: 45.0,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green,
+                  minimumSize: const Size.fromHeight(40), // NEW
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Login',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+```
