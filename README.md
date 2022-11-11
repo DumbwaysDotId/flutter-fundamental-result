@@ -1,6 +1,6 @@
 # Event
 
-For Example, Event on Flutter you can use `TextButton` Widget with onPressed `property`
+For Example, Event on Flutter you can use `TextButton` Widget with `onPressed` property
 
 > lib/screens/Event.dart
 
