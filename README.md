@@ -1,16 +1,37 @@
-# flutter_fundamental
+# Event
 
-A new Flutter project.
+For Example, Event on Flutter you can use `TextButton` Widget with onPressed `property`
 
-## Getting Started
+> lib/screens/Event.dart
 
-This project is a starting point for a Flutter application.
+```dart
+class Event extends StatelessWidget {
+  const Event({super.key});
 
-A few resources to get you started if this is your first Flutter project:
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("If you press Click Here then an alert will appear"),
+          TextButton(
+              onPressed: (() {
+                print("=> Hello Full-Stack Bootcamp Participants");
+              }),
+              child: Text("Click here")),
+          Text("If you press Greeting then an alert will appear"),
+          TextButton(
+              onPressed: (() {
+                print("=> Good Morning Everyone Have a Nice Day");
+              }),
+              child: Text("Greeting")),
+        ],
+      )),
+    );
+  }
+}
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+But you can use another Widget, like `GestureDetector` [check here](https://docs.flutter.dev/development/ui/advanced/gestures#gestures) or [check here](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html)

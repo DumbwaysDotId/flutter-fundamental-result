@@ -8,9 +8,6 @@ class Event extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var companyName = "Dumbways";
-    var country = "Indonesia";
-
     return Container(
       child: Center(
           child: Column(
